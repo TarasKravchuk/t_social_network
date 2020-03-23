@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Edit your account {% endblock %}
+{% block content %}
+  <form action="." method="post" enctype="multipart/form-data">
+<center><table>
+    {{ form.as_table }}
+    {% csrf_token %}
+</table></center>
+<center><button class="btn btn-outline-success" type="submit"> Create new user </button></center>
+  </form>
+{% endblock %}

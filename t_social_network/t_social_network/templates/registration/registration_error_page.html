@@ -1,0 +1,20 @@
+  <style>
+   .body {
+    margin-left: 12%;
+    margin-top: 1%;
+    top: 30px;
+   }
+  </style>
+
+{% extends "base.html" %}
+{% block title %}Reset your password{% endblock %}
+{% block content %}
+<div class="body">
+<h2>Registration error</h2><br>
+<h4>Most likely one of the following happened:</h4><br>
+    <h4><li> user {{name}} already exist; </li></h4> <br>
+    <h4><li> someone already use email {{email}};</li></h4><br>
+<a href="{% url 'account:registration' %}" class="btn btn-outline-info" role="button" aria-pressed="true"> I understand, I want to try again. </a>
+
+</div>
+    {% endblock %}

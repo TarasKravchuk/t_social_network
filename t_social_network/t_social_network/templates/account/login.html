@@ -1,0 +1,22 @@
+ <style>
+   .colortext {
+     color: red;
+   }
+  </style>
+
+{% extends "base.html" %}
+
+{% block content %}
+<center> <h2> LogIn </h2> </center>
+{% if form.errors %}
+ <h4><span  class="colortext">Your username and password didn't match.Please try again.</span></h4>
+{% else %}
+  <center><p>Please, use the following form to log-in:</p> </center>
+ {% endif %}
+<center><form action="." method="post">
+    {{ form.as_p}}
+    {% csrf_token %}
+    <button class="btn btn-primary" type="submit"> LogIn </button>
+</form></center>
+ <center> <button class="btn btn-outline-warning"> <a href="{% url 'account:password_reset' %}"> Forgotten your password? </a> </button></center>
+{% endblock %}
