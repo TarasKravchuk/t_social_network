@@ -6,6 +6,7 @@
     {{ form.as_table }}
     {% csrf_token %}
 </table></center>
-<center><button class="btn btn-outline-success" type="submit"> Create new user </button></center>
+<center><button class="btn btn-outline-info" type="submit"> Create new user </button></center>
+      {% csrf_token %}
   </form>
 {% endblock %}

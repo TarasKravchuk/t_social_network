@@ -1,0 +1,20 @@
+  <style>
+   .body {
+    margin-left: 12%;
+    margin-top: 1%;
+    top: 30px;
+   }
+  </style>
+
+{% extends 'base.html'%}
+{% block title %} Registration code error {% endblock %}
+{% block content %}
+  <div class="body">
+      <h4> Unfortunately, according to the rules of our site after 3 unsuccessful code entry attempts {{username}} was
+      deleted.
+          You need to start registration again.
+      </h4>
+      <a class="btn btn-outline-success" href="{% url 'account:registration' %}" role="button">Start registration again</a>
+      {% csrf_token %}
+  </div>
+  {% endblock %}

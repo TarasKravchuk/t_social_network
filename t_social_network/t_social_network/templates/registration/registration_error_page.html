@@ -15,6 +15,6 @@
     <h4><li> user {{name}} already exist; </li></h4> <br>
     <h4><li> someone already use email {{email}};</li></h4><br>
 <a href="{% url 'account:registration' %}" class="btn btn-outline-info" role="button" aria-pressed="true"> I understand, I want to try again. </a>
-
+{% csrf_token %}
 </div>
     {% endblock %}

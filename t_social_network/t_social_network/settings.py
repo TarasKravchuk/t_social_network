@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # настройки для рассылки email через gmail
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

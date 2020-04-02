@@ -1,5 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
+#from .models import TemporaryRegistrationModel
+from .models import UserProfileModel
 #import hashlib
 
 class LoginForm (forms.Form):
@@ -7,8 +9,10 @@ class LoginForm (forms.Form):
     password = forms.CharField(widget=forms.PasswordInput)
 
 
-class RegistrationPassword(forms.Form):
-    registration_password = forms.CharField(label='Your registration password ')
+class RegistrationPasswordForm (forms.ModelForm):
+    class Meta:
+        model = UserProfileModel
+        fields = ['user_registration_code']
 
 class UserRegistrationForm (forms.ModelForm):
 

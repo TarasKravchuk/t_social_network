@@ -28,4 +28,6 @@ urlpatterns = [
                                                                 name='password_reset_complete'),
 
     path('registration/', user_registration, name='registration'),
+
+    path('registration-code-confirmation/<str:username>/<int:number_of_rec>/', user_registration_code_cheacker, name='registration_code')
 ]

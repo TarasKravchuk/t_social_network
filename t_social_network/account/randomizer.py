@@ -8,8 +8,3 @@ def random_char_creator (uppercase=ascii_uppercase, lowercase=ascii_lowercase, n
         return result
     else:
         return random_char_creator(ascii_uppercase, ascii_lowercase, digits, i, result)
-
-
-from random import randint
-
-print(randint(1,10))

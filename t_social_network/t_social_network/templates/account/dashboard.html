@@ -3,6 +3,7 @@
 {% block content %}
 
 <center><h2> DASHBOARD </h2></center>
+<center>{{user}}</center>
 
-<center><button type="button" class="btn btn-outline-primary"> <a href="{% url 'account:logout' %}">Logout </a> </button></center>
+<center> <a  href="{% url 'account:logout' %}" class="btn btn-outline-info" role="button" aria-pressed="true"> Logout </a>  </center>
 {% endblock %}

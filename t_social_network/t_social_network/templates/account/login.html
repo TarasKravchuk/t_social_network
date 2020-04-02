@@ -16,7 +16,10 @@
 <center><form action="." method="post">
     {{ form.as_p}}
     {% csrf_token %}
-    <button class="btn btn-primary" type="submit"> LogIn </button>
+    <button class="btn btn-outline-info" type="submit"> LogIn </button>
 </form></center>
- <center> <button class="btn btn-outline-warning"> <a href="{% url 'account:password_reset' %}"> Forgotten your password? </a> </button></center>
+ <center> <a href="{% url 'account:registration' %}" class="btn btn-outline-info" role="button" aria-pressed="true"> Create your account </a>  </center> <br>
+ <center> <a href="{% url 'account:password_reset' %}" class="btn btn-outline-info" role="button" aria-pressed="true"> Forgot your password? </a>  </center>
+ {% csrf_token %}
 {% endblock %}
+
